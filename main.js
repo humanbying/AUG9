@@ -23,13 +23,22 @@ const Counter = React.createClass({
 });
 
 const NewMessageForm = React.createClass({
+  getInitialState: function() {
+    return {
+      text: 'sample text'
+    }
+  },
   addMessage: function() {
     this.props.addMessage('hiya!');
+  },
+  onInputChange: function(event) {
+    // console.log('change event', event);
+    this.setState({text: event.target.value})
   },
   render: function() {
     return (
       <div>
-        <input type="text"/>
+        <input type="text" value = {this.state.text} onChange={this.onInputChange}/>
         <button onClick={this.addMessage}>Add</button>
       </div>
     );
