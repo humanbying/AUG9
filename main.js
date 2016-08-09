@@ -25,7 +25,7 @@ const Counter = React.createClass({
 const NewMessageForm = React.createClass({
   addMessage: function() {
     this.props.addMessage('hiya!');
-  }
+  },
   render: function() {
     return (
       <div>
@@ -61,7 +61,10 @@ const MessageBoard = React.createClass({
       id: uuid()
     };
 
-    this.state.messages.push(message);
+    this.setState({
+      messages: this.state.messages.concat(message)
+    })
+
   },
   render: function() {
     return (
