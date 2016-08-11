@@ -2,6 +2,8 @@ button{
   margin: 5px;
   background-color: #8c8;
   border:none;
+  opacity: .95;
+  height:30px;
 }
 
 li {
@@ -9,8 +11,8 @@ li {
 }
 body {
   font-family: sans-serif;
-  /*background-color: #111;*/
-  /*color:white;*/
+  background-color: #111;
+  color:white;
 }
 
 #root {
@@ -20,6 +22,10 @@ body {
 input {
   width:400px;
   color:black;
+  opacity:.15;
+  font-size: 20px;
+  color:black;
+  font-weight: 600;
 }
 
 #tasks {
