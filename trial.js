@@ -34,7 +34,7 @@ var TaskApp = React.createClass({
 
       <form onSubmit={this.addTask}>
       <input onChange={this.onChange} type="text" value={this.state.task}/>
-      <button> Add Task </button>
+      <button> Add Message </button>
       </form>
       </div>
     );
@@ -60,7 +60,7 @@ var TaskList = React.createClass({
     return <ul>
     {this.props.items.map((task, taskIndex) =>
       <li key={taskIndex}>
-      <span onClick={this.editTodo}{task}</span>
+      {task}
       <button onClick={this.props.deleteTask} value={taskIndex}> Delete </button>
       </li>
     )}
